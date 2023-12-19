@@ -8,14 +8,39 @@
     <!--comment-->
     <button onclick="console.log('Welcome to Day 4');">Click Me</button>
     <script>
-      //let isRaining = true
-      //isRaining?console.log('Yes'):console.log('No')
-//
-      //let number = prompt('Enter number', 'number goes here')
-      //console.log(number)
       
-      let date = new Date()
-      console.log(date.getFullYear()+'-'+date.getMonth()+'-'+date.getDay()+' '+ ('0'+date.getHours()).slice(-2)+':'+('0'+date.getMinutes()).slice(0,2))
+//
+      let month = prompt('Enter a month', 'Month goes here')
+      let month2 = month.toLowerCase()
+      
+      switch (month2){
+        case  'january':
+        case  'march':
+        case  'may':
+        case  'july':
+        case  'august':
+        case  'october':
+        case  'december':
+          console.log(`${month} has 31 days`)
+          break
+
+        case 'february':
+          console.log(`${month} has 28 days`)
+          break
+
+        case 'april':
+        case 'june':
+        case 'september':
+        case 'november':
+          console.log(`${month} has 31 days`)
+          break
+
+        default:
+          console.log(`Not a valid month`)
+          break
+      }
+      
+      
     </script>
   </body>
 </html>
